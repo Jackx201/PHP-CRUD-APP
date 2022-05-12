@@ -9,18 +9,32 @@
   <title>Diagnosis Exam</title>
 </head>
 <body>
+
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
   <div class="container-fluid">
   <a class="navbar-brand" href="#">UTLD</a>
 
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
   <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="./login.php">Login</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="./signup.php">Sign Up</a>
-        </li>
+    <?php
+    session_start(); 
+     if(isset($_SESSION['email'])) {
+      echo'
+      <li class="nav-item">
+      <a class="nav-link active" aria-current="page" href="./sessions/destroySession.php">Logout</a>
+      </li>
+      ';
+    } else {
+     echo '
+     <li class="nav-item">
+     <a class="nav-link active" aria-current="page" href="./login.php">Login</a>
+     </li>
+
+    <li class="nav-item">
+    <a class="nav-link active" aria-current="page" href="./signup.php">Sign Up</a>
+    </li>
+     '; 
+    }?>
     </ul>
   </div>
     
@@ -30,6 +44,12 @@
 
 <div class="container" style="text-align: center;">
   <h1>Diagnosis Exam</h1>
+
+<?php 
+  if(isset($_SESSION['email'])){
+  echo 'Welcome:' .($_SESSION['email']);
+  }
+ ?>
 </div>
 
 <div class="container" style="margin-top: 3%;">

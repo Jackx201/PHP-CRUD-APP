@@ -24,7 +24,11 @@
           <input type="password" class="form-control" id="pass" name="pass">
           <div id="emailHelp" class="form-text">Same as above, use a random password like 123</div>
         </div>
-        <button type="submit" class="btn btn-primary">Submit</button>
+        <button type="submit" class="btn btn-primary">Sign Up!</button>
+        <a href="./index.php"><button type="button" class="btn btn-success">Cancel</button> </a>
+        <br>
+        <br>
+        <a href="./login.php">Already Have an account? Log in here!</a>
       </form>
     </div>
   </div>

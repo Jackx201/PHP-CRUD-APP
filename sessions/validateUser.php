@@ -10,13 +10,12 @@ require_once "../connection.php";
  $result = $conn->query($sql);
 
  if (mysqli_num_rows($result)!=0) { 
+  session_start(); 
   $_SESSION['email'] = $user;
   header("Location: ../index.php");
-  
-   
- 
+
 }else{
-  echo 'El email o password es incorrecto, <a href="index.html">vuelva a intenarlo</a>.<br/>';
+  echo 'El email o password es incorrecto, <a href="../login.php">vuelva a intenarlo</a>.<br/>';
 }
  
 ?>

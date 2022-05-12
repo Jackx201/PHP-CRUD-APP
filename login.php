@@ -8,7 +8,13 @@
   <title>Document</title>
 </head>
 <body>
-
+<?php 
+  $newUser = $_GET["newUser"];
+  if($newUser == true){
+    echo"<h5 style='text-align:center; margin-top:3%'>New User Created Succesfully!</h5>";
+    echo"<h5 style='text-align:center;'>Please Login</h5>";
+  }
+?>
 <div class="container">
   <div class="card" style="margin-top: 5%">
     <div class="card-body">
@@ -24,7 +30,11 @@
           <input type="password" class="form-control" id="exampleInputPassword1" name="password">
           <div id="emailHelp" class="form-text">Same as above, use a random password like 123</div>
         </div>
-        <button type="submit" class="btn btn-primary">Submit</button>
+        <button type="submit" class="btn btn-primary">Login</button>
+        <a href="./index.php"><button type="button" class="btn btn-success">Cancel</button> </a>
+        <br>
+        <br>
+        <a href="./signup.php">You don't have an account? Create One here!</a>
       </form>
     </div>
   </div>
